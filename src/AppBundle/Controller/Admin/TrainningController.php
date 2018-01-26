@@ -13,7 +13,7 @@ class TrainningController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('admin/trainnnig/index.html.twig', [
+        return $this->render('admin/trainning/index.html.twig', [
 
         ]);
     }
