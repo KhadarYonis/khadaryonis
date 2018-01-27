@@ -5,6 +5,9 @@ namespace AppBundle\Controller\Admin;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+/**
+ * @Route("/admin")
+ */
 class DailyController extends Controller
 {
     /**
@@ -12,8 +15,6 @@ class DailyController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('admin/daily/index.html.twig', [
-
-        ]);
+        return $this->render('admin/daily/index.html.twig');
     }
 }

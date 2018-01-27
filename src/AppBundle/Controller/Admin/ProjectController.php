@@ -5,6 +5,9 @@ namespace AppBundle\Controller\Admin;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+/**
+ * @Route("/admin")
+ */
 class ProjectController extends Controller
 {
     /**
@@ -12,7 +15,6 @@ class ProjectController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('admin/project/index.html.twig', [
-        ]);
+        return $this->render('admin/project/index.html.twig');
     }
 }

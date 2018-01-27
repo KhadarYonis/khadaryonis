@@ -13,37 +13,39 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a href="{{ url('homepage.index') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                <a href="{{ url('homepage.index') }}"><i class="fa fa-dashboard fa-fw"></i> {{ 'admin.page.title.dashboard' | trans | capitalize }}</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-edit fa-fw "></i> Articles<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-edit fa-fw "></i> {{ 'admin.page.title.items.items' | trans | capitalize }}<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="{{ url('item.index') }}">Articles</a>
+                        <a href="{{ url('item.index') }}">{{ 'admin.page.title.items.items' | trans | capitalize }}</a>
                     </li>
                     <li>
-                        <a href="{{ url('category.index') }}">Categories</a>
+                        <a href="{{ url('category.index') }}">{{ 'admin.page.title.items.categories' | trans | capitalize }}</a>
                     </li>
                     <li>
-                        <a href="{{ url('skill.index') }}">Compétances</a>
+                        <a href="{{ url('skill.index') }}">{{ 'admin.page.title.items.skills' | trans | capitalize }}</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="{{ url('service.index') }}"><i class="fa fa-table fa-fw"></i> Services</a>
+                <a href="{{ url('portfolio.index') }}"><i class="fa fa-table fa-fw"></i> {{ 'admin.page.title.portfolio' | trans | capitalize }}</a>
             </li>
             <li>
-                <a href="{{ url('daily.index') }}"><i class="fa fa-bar-chart-o fa-fw"></i> Au Quatidien</a>
+                <a href="{{ url('service.index') }}"><i class="fa fa-table fa-fw"></i> {{ 'admin.page.title.services' | trans | capitalize }}</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-wrench fa-fw"></i> Résumé<span class="fa arrow"></span></a>
+                <a href="{{ url('daily.index') }}"><i class="fa fa-bar-chart-o fa-fw"></i> {{ 'admin.page.title.daily' | trans | capitalize }}</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-wrench fa-fw"></i> {{ 'admin.page.title.resume.resume' | trans | capitalize }}<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
-                    <li>
-                        <a href="{{ url('trainning.index') }}"> Diplômes et Formations</a>
+                    <li><a href="{{ url('training.index') }}"> {{ 'admin.page.title.resume.diplomas' | trans | capitalize }}</a>
                     </li>
                     <li>
-                        <a href="{{ url('project.index') }}">Projets et Réalisations</a>
+                        <a href="{{ url('project.index') }}"> {{ 'admin.page.title.resume.projects' | trans | capitalize }}</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->

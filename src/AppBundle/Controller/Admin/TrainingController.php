@@ -6,15 +6,16 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class TrainningController extends Controller
+/**
+ * @Route("/admin")
+ */
+class TrainingController extends Controller
 {
     /**
-     * @Route("/trainning", name="trainning.index")
+     * @Route("/training", name="training.index")
      */
     public function indexAction()
     {
-        return $this->render('admin/trainning/index.html.twig', [
-
-        ]);
+        return $this->render('admin/training/index.html.twig');
     }
 }

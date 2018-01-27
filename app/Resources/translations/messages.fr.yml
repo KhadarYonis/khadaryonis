@@ -1,0 +1,16 @@
+admin:
+    page:
+        title:
+            dashboard: dashborad
+            items:
+                item: articles
+                categories: catégories
+                skills: compétences
+            services: services
+            daily: au quatidien
+            resume:
+                resume: résumé
+                diplomas: diplômes et formations
+                projects: projets et réalisations
+            contact: contact
+            portfolio: portfolio

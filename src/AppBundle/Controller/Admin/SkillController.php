@@ -5,6 +5,9 @@ namespace AppBundle\Controller\Admin;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+/**
+ * @Route("/admin")
+ */
 class SkillController extends Controller
 {
     /**
@@ -13,8 +16,6 @@ class SkillController extends Controller
     public function indexAction()
     {
         
-        return $this->render('admin/skill/index.html.twig', [
-
-        ]);
+        return $this->render('admin/skill/index.html.twig');
     }
 }
