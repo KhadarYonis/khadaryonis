@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <!-- Resume Subpage -->
+    <section class="pt-page-3" style="padding: 50px 70px 50px; background-color: #fff;">
+        <div class="section-title-block">
+            <h2 class="section-title">{{ 'public.page.resume.title' | trans | capitalize}}</h2>
+            <h5 class="section-description">{{ 'public.page.resume.resume' | trans }}</h5>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4 subpage-block">
+                <div class="block-title">
+                    <h3>{{ 'public.page.resume.title_one' | trans | upper }}</h3>
+                </div>
+                {% for training in trainings%}
+                    <div class="timeline">
+                        <!-- Single event -->
+                        <div class="timeline-event te-primary">
+                            <h5 class="event-date">{{ training.dateBegin | date('m-Y')}} - {{ training.dateEnd | date('m-Y') }}</h5>
+                            <h4 class="event-name">{{ training.translations[app.request.locale].name | capitalize}}</h4>
+                            <span class="event-description">{{ training.translations[app.request.locale].academy | capitalize }}</span>
+                            <p>{{ training.translations[app.request.locale].description | capitalize | raw}}</a></p>
+                        </div>
+                        <!-- Single event -->
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="col-sm-6 col-md-4 subpage-block">
+                <div class="block-title">
+                    <h3>{{ 'public.page.resume.title_two' | trans | upper }}</h3>
+                </div>
+                {% for project in projects%}
+                    <div class="timeline">
+                        <!-- Single event -->
+                        <div class="timeline-event te-primary">
+                            <h5 class="event-date">{{ project.dateBegin | date('m-Y')}} - {{ project.dateEnd | date('m-Y') }}</h5>
+                            <h4 class="event-name">{{ project.translations[app.request.locale].name | capitalize}}</h4>
+                            <span class="event-description">{{ project.translations[app.request.locale].academy | capitalize }}</span>
+                            <p>{{ project.translations[app.request.locale].description | capitalize | raw}}</a></p>
+                        </div>
+                        <!-- Single event -->
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="col-sm-6 col-md-4 subpage-block">
+                <div class="block-title">
+                    <h3>{{ 'public.page.resume.title_three' | trans | upper }}</h3>
+                </div>
+                {% for skill in skills%}
+                    <div class="skills-info">
+                        <h4>{{ skill.translations[app.request.locale].name | capitalize | raw}}</h4>
+                        <div class="skill-container">
+                            <div class="skill-percentage skill-{{ skill.percentage }}"></div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {#<div class="row" id="download_desktop">#}
+            {#<div class="col-sm-12 col-md-12">#}
+                {#<div class="download-cv-block">#}
+                    {#<a class="button" target="_blank" href="cv.php">Télécharger mon CV</a>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    </section>
+    <!-- End Resume Subpage -->
+
+{% endblock %}
+
+

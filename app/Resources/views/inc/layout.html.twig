@@ -13,13 +13,16 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a href="{{ url('homepage.index') }}"><i class="fa fa-dashboard fa-fw"></i> {{ 'admin.page.title.dashboard' | trans | capitalize }}</a>
+                <a href="{{ url('admin.homepage.index') }}"><i class="fa fa-dashboard fa-fw"></i> {{ 'admin.page.title.dashboard' | trans | capitalize }}</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-edit fa-fw "></i> {{ 'admin.page.title.items.items' | trans | capitalize }}<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="{{ url('item.index') }}">{{ 'admin.page.title.items.items' | trans | capitalize }}</a>
+                        <a href="{{ url('item.index') }}">{{ 'admin.page.title.items.item' | trans | capitalize }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('carousel.index') }}">{{ 'admin.page.title.items.carousel' | trans | capitalize }}</a>
                     </li>
                     <li>
                         <a href="{{ url('category.index') }}">{{ 'admin.page.title.items.categories' | trans | capitalize }}</a>

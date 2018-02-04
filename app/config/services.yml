@@ -33,3 +33,43 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+
+    AppBundle\Form\DailyType:
+        arguments:
+            $locales: '%locales%'
+
+    AppBundle\Form\ServiceType:
+        arguments:
+            $locales: '%locales%'
+
+    AppBundle\Form\TrainingType:
+        arguments:
+            $locales: '%locales%'
+
+    AppBundle\Form\ProjectType:
+        arguments:
+            $locales: '%locales%'
+
+    AppBundle\Form\ContactType:
+        arguments:
+            $locales: '%locales%'
+
+    AppBundle\Form\CategoryType:
+        arguments:
+            $locales: '%locales%'
+
+    AppBundle\Form\CarouselType:
+        arguments:
+            $locales: '%locales%'
+
+    AppBundle\Form\ItemType:
+        arguments:
+            $locales: '%locales%'
+
+    AppBundle\Form\PortfolioType:
+        arguments:
+            $locales: '%locales%'
+
+    AppBundle\Form\SkillType:
+        arguments:
+            $locales: '%locales%'

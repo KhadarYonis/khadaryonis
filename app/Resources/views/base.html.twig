@@ -2,12 +2,61 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>{% block title %}Khadar Yonis - Développeur WEB{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('asset/css/bootstrap.css') }}" />
+        <link rel="stylesheet" href="{{ asset('asset/css/normalize.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('asset/css/transition-animations.css') }}" />
+        <link rel="stylesheet" href="{{ asset('asset/css/owl.carousel.css') }}">
+        <link rel="stylesheet" href="{{ asset('asset/css/magnific-popup.css') }}" />
+        <link rel="stylesheet" href="{{ asset('asset/css/animate.css') }}">
+        <link rel="stylesheet" href="{{ asset('asset/css/main.css') }}" />
+        {#<link rel="stylesheet" href="{{ asset('ckeditor/contents.css') }}">#}
+
+
+        <script src="{{ asset('asset/js/jquery-2.1.3.min.js') }}"></script>
+        <script src="{{ asset('asset/js/modernizr.custom.js') }}"></script>
+
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+
+        {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="preloader">
+            <div class="preloader-animation">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+
+        <div id="page" class="page">
+            {% include 'inc/header-public.html.twig' %}
+            <!-- Main Content -->
+            <div id="main" class="site-main">
+                <!-- Page changer wrapper -->
+                <div class="pt-wrapper">
+                    <!-- Subpages -->
+                    <div class="subpages">
+                        {% block body %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="{{ asset('asset/js/bootstrap.min.js') }}"></script>
+        {#<script src="{{ asset('asset/js/page-transition.js') }}"></script>#}
+        {#<script type="text/javascript" src="{{ asset('ckeditor/ckeditor.js') }}" charset="utf-8"></script>#}
+        <script src="{{ asset('asset/js/imagesloaded.pkgd.min.js') }}"></script>
+        <script src="{{ asset('asset/js/validator.js') }}"></script>
+        <script src="{{ asset('asset/js/jquery.shuffle.min.js') }}"></script>
+        <script src="{{ asset('asset/js/masonry.pkgd.min.js') }}"></script>
+        <script src="{{ asset('asset/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('asset/js/jquery.magnific-popup.min.js') }}"></script>
+        <script src="{{ asset('asset/js/jquery.hoverdir.js') }}"></script>
+        <script src="{{ asset('asset/js/main.js') }}"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC-bJn0dtPVdUNFs2aTEEkCkCBmnA2Xd8&sensor=false"></script>
+        <script src="{{ asset('asset/js/google_map.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

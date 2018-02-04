@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Contact Subpage -->
+    <section class="pt-page-6" style="padding: 50px 70px 50px; background-color: #fff;">
+        <div class="section-title-block">
+            <h2 class="section-title">Contact</h2>
+            {#<h5 class="section-description">Envie de me contacter ?</h5>#}
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-6 subpage-block">
+                <div class="block-title">
+                    <h3>{{ 'public.page.contact.mycontact' | trans | capitalize }}</h3>
+                </div>
+                {% for contact in contacts %}
+                    <p>{{ contact.translations[app.request.locale].introDescription | capitalize | raw }}</p>
+                    <div class="contact-info-block">
+                        <div class="ci-icon">
+                            <i class="pe-7s-icon pe-7s-map-marker"></i>
+                        </div>
+                        <div class="ci-text">
+                            <h5>Pontoise, FRANCE</h5>
+                        </div>
+                    </div>
+                    <div class="contact-info-block">
+                        <div class="ci-icon">
+                            <i class="pe-7s-icon pe-7s-mail"></i>
+                        </div>
+                        <div class="ci-text">
+                            <h5>{{ contact.email }} {{ 'public.page.homepage.or' | trans | upper }} contact@khadaryonis.fr</h5>
+                        </div>
+                    </div>
+                    <div class="contact-info-block">
+                        <div class="ci-icon">
+                            <i class="pe-7s-icon pe-7s-call"></i>
+                        </div>
+                        <div class="ci-text">
+                            <h5>+33 7 54 41 30 73</h5>
+                        </div>
+                    </div>
+                    <div class="contact-info-block">
+                        <div class="ci-icon">
+                            <i class="pe-7s-icon pe-7s-check"></i>
+                        </div>
+                        <div class="ci-text">
+                            <h5>{{ contact.translations[app.request.locale].job }}</h5>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="col-sm-6 col-md-6 subpage-block">
+                <div class="block-title">
+                    <h3>{{ 'public.page.contact.form' | trans | capitalize }}</h3>
+                </div>
+                <form id="contact-form" method="post" action="contact_form/contact_form.php">
+
+                    <div class="messages"></div>
+
+                    <div class="controls">
+                        <div class="form-group">
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Nom" required="required" data-error="Le nom est requis">
+                            <div class="form-control-border"></div>
+                            <i class="form-control-icon fa fa-user"></i>
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input id="form_email" type="email" name="email" class="form-control" placeholder="E-mail" required="required" data-error="Un e-mail valide est requis.">
+                            <div class="form-control-border"></div>
+                            <i class="form-control-icon fa fa-envelope"></i>
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="form_message" name="message" class="form-control" placeholder="{{ 'public.page.contact.placeholder.message' | trans | capitalize }}" rows="4" required="required" data-error="S'il vous plaît, laissez-moi un message."></textarea>
+                            <div class="form-control-border"></div>
+                            <i class="form-control-icon fa fa-comment"></i>
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <div class="g-recaptcha" data-sitekey="6Lf33DUUAAAAAB7zn98yHP-oedTl6_MEQkQe_L-2"></div>
+
+                        <input type="submit" class="button btn-send" value="{{ 'public.page.contact.btn' | trans | capitalize }}">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-12 subpage-block" id="map" style="height: 400px; width:100%">
+            </div>
+        </div>
+
+
+
+        <!--  <div class="row" id="contact_desktop">
+         <div class="col-sm-4 col-md-4">
+           <div class="download-cv-block " style="float: left">
+             <a class="button" href="#blog">Blog</a>
+           </div>
+                      </div> -->
+    </section>
+    <!-- End Contact Subpage -->
+
+
+{% endblock %}

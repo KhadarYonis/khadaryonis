@@ -1,11 +1,13 @@
 admin:
     page:
         title:
-            dashboard: dashborad
+            dashboard: dashboard
             items:
+                items: articles
                 item: articles
                 categories: catégories
                 skills: compétences
+                carousel: carousel des articles
             services: services
             daily: au quatidien
             resume:
@@ -14,3 +16,327 @@ admin:
                 projects: projets et réalisations
             contact: contact
             portfolio: portfolio
+        form:
+            daily:
+                add: ajouter un quatidien
+                table:
+                    id: id
+                    name: nom
+                    image: image
+                    action: action
+                new_daily:
+                    image: image
+                    name_fr: nom en français
+                    name_en: nom en anglais
+                    placeholder:
+                        name_fr: entrez votre nom en français
+                        name_en: entrez votre nom en anglais
+            carousel:
+                add: ajouter un carousel
+                table:
+                    id: id
+                    image: image
+                    portfolioId: portfolio id
+                    action: action
+                new_carousel:
+                    image: image
+            service:
+                add: ajouter un service
+                table:
+                    id: id
+                    name: nom
+                    description: description
+                    image: image
+                    action: action
+                new_service:
+                    image: image
+                    name_fr: nom en français
+                    name_en: nom en anglais
+                    description_fr: description en français
+                    description_en: description en anglais
+                    placeholder:
+                        name_fr: entrez votre nom en français
+                        name_en: entrez votre nom en anglais
+                        description_fr: entrez votre description en français
+                        description_en: entrez votre description en anglais
+            training:
+                add: ajouter une formation
+                table:
+                    id: id
+                    name: nom
+                    academy: academy
+                    description: description
+                    date_begin: date debut
+                    date_end: date fin
+                    action: action
+                new_training:
+                    date_begin: date debut
+                    date_end: date fin
+                    name_fr: nom en français
+                    name_en: nom en anglais
+                    academy_fr: academy en français
+                    academy_en: academy en anglais
+                    description_fr: description en français
+                    description_en: description en anglais
+                    placeholder:
+                        name_fr: entrez votre nom en français
+                        name_en: entrez votre nom en anglais
+                        academy_fr: entrez votre academy en français
+                        academy_en: entrez votre academy en anglais
+                        description_fr: entrez votre description en français
+                        description_en: entrez votre description en anglais
+            project:
+                add: ajouter un projet
+                table:
+                    id: id
+                    name: nom
+                    academy: academy
+                    description: description
+                    date_begin: date debut
+                    date_end: date fin
+                    action: action
+                new_project:
+                    date_begin: date debut
+                    date_end: date fin
+                    name_fr: nom en français
+                    name_en: nom en anglais
+                    academy_fr: academy en français
+                    academy_en: academy en anglais
+                    description_fr: description en français
+                    description_en: description en anglais
+                    placeholder:
+                        name_fr: entrez votre nom en français
+                        name_en: entrez votre nom en anglais
+                        academy_fr: entrez votre academy en français
+                        academy_en: entrez votre academy en anglais
+                        description_fr: entrez votre description en français
+                        description_en: entrez votre description en anglais
+            contact:
+                add: ajouter un contact
+                table:
+                    id: id
+                    first_name: prénom
+                    last_name: nom
+                    email: adresse mail
+                    phone: téléphone
+                    description_small: description court
+                    action: action
+                new_contact:
+                    first_name: prénom
+                    last_name: nom
+                    age: âge
+                    cp: code postal
+                    city: ville
+                    region: région
+                    country: pays
+                    phone: téléphone
+                    email: email
+                    job_fr: job
+                    job_en: job
+                    description_small_fr: description court
+                    description_small_en: description court
+                    description_long_fr: description long
+                    description_long_en: description long
+                    intro_description_fr: intro description
+                    intro_description_en: intro description
+                    placeholder:
+                        first_name: entrez votre prénom
+                        last_name: entrez votre nom
+                        age: entrez votre âge
+                        cp: entrez votre code postal
+                        city: entrez votre city
+                        region: entrez votre region
+                        country: entrez votre pay
+                        phone: entrez votre phone
+                        email: entrez votre email
+                        job_fr: entrez votre job en français
+                        job_en: entrez votre job en anglais
+                        description_small_fr: entrez votre description court en français
+                        description_small_en: entrez votre description small en anglais
+                        description_long_fr: entrez votre description long en français
+                        description_long_en: entrez votre description long en anglais
+                        intro_description_fr: entrez votre intro description en français
+                        intro_description_en: entrez votre intro description en anglais
+            category:
+                add: ajouter un categorie
+                table:
+                    id: id
+                    name: nom
+                    description: description
+                    action: action
+                new_category:
+                    name_fr: nom en français
+                    name_en: nom en anglais
+                    description_fr: description en français
+                    description_en: description en anglais
+                    placeholder:
+                        name_fr: entrez le nom de l'article en français
+                        name_en: entrez le nom de l'article en anglais
+                        description_fr: entrez la description de l'article en français
+                        description_en: entrez la description de l'article en anglais
+            skill:
+                add: ajouter une compétence
+                table:
+                    id: id
+                    name: nom
+                    description: description
+                    percentage: pourcentage
+                    action: action
+                new_skill:
+                    percentage: entre une compétence
+                    name_fr: nom en français
+                    name_en: nom en anglais
+                    description_fr: description en français
+                    description_en: description en anglais
+                    placeholder:
+                        percentage: entrez le percentage
+                        name_fr: entrez le nom de l'article en français
+                        name_en: entrez le nom de l'article en anglais
+                        description_fr: entrez la description de l'article en français
+                        description_en: entrez la description de l'article en anglais
+            item:
+                add: ajouter un nouveau article
+                table:
+                    id: id
+                    name: nom
+                    image: image
+                    modified: modifié
+                    description: description
+                    category: catégorie
+                    skill_id: skill id
+                    action: action
+                new_item:
+                    name_fr: nom article en français
+                    name_en: nom article en anglais
+                    image: image
+                    modified: modifié
+                    date_create: date de création
+                    author: auteur
+                    skills: compétences
+                    category: catégorie
+                    description_fr: description en français
+                    description_en: description en anglais
+                    category: catégorie
+                    placeholder:
+                        author: entrez l'auteur
+                        name_fr: entrez le nom de l'article en français
+                        name_en: entrez le nom de l'article en anglais
+                        image: image
+                        modified: modified
+                        description_fr: entrez la description de l'article en français
+                        description_en: entrez la description de l'article en anglais
+            portfolio:
+                add: ajouter un portfolio
+                table:
+                    id: id
+                    name: nom
+                    customer: client
+                    website: site
+                    date_begin: date debut
+                    date_end: date fin
+                    description: description
+                    category_id: categorie id
+                    skill_id: skill id
+                    action: action
+                new_portfolio:
+                    name_fr: nom de portfolio en français
+                    name_en: nom de portfolio en anglais
+                    customer: client
+                    website: site
+                    skills: compétences
+                    category: catégorie
+                    date_begin: date debut
+                    date_end: date fin
+                    description_fr: description en français
+                    description_en: description en anglais
+                    placeholder:
+                        name_fr: entrez le nom du portfolio en français
+                        name_en: entrez le nom du portfolio en anglais
+                        customer: client
+                        website: site
+                        description_fr: entrez la description du portfolio en français
+                        description_en: entrez la description du portfolio en anglais
+
+    flash_message:
+        daily:
+            new_daily: un quatidien est ajouté !
+            edit_daily: un quatidien est modifié !
+            delete_daily: un quatidien est supprimé !
+        service:
+            new_service: un service est ajouté !
+            edit_service: un service est modifié !
+            delete_service: un service est supprimé !
+        training:
+            new_training: une formation est ajoutée !
+            edit_training: une formation est modifiée !
+            delete_training: une formation est supprimée !
+        project:
+            new_project: un projet est ajoutée !
+            edit_project: un projet est modifiée !
+            delete_project: un projet est supprimée !
+        contact:
+            new_contact: un contact est ajoutée !
+            edit_contact: un contact est modifiée !
+            delete_contact: un contact est supprimée !
+        category:
+            new_category: un category est ajoutée !
+            edit_category: un category est modifiée !
+            delete_category: un category est supprimée !
+        carousel:
+            new_carousel: un carousel est ajoutée !
+            edit_carousel: un carousel est modifiée !
+            delete_carousel: un carousel est supprimée !
+        skill:
+            new_skill: un compétences est ajoutée !
+            edit_skill: un compétences est modifiée !
+            delete_skill: un compétances est supprimée !
+        item:
+            new_item: un article est ajouté !
+            edit_item: un article est modifié !
+            delete_item: un article est supprimé !
+        portfolio:
+            new_portfolio: un portfolio est ajouté !
+            edit_portfolio: un portfolio est modifié !
+            delete_portfolio: un portfolio est supprimé !
+
+public:
+    page:
+        menu:
+            home: accueil
+            about_me: à propos de moi
+            resume: résumé
+            portfolio: portfolio
+            blog: blog
+            contact: contact
+            job: Développeur Full Stack spécialisé sur le framework Symfony
+        homepage:
+            back-end: back-end développeur
+            full-stack: full-stack développeur
+            age: âge
+            address: adresse
+            e-mail: e-mail
+            phone: téléphone
+            job: travail
+            or: ou
+        resume:
+            title: résumé
+            resume: 5 ans dans le web (4.5 ans d'études et 6 mois d'expérience professionel)
+            title_one: diplômes et formations
+            title_two: projets et réalisation web
+            title_three: compétences
+        aboutme:
+            aboutme: à propos de moi
+            title: je suis Développeur Full Stack spécialisé sur le framework Symfony et avant tout je suis un passionné de l'informatique
+            title_one: mes services
+            title_two: j'y étais un jour
+            title_three: au quatidien
+        contact:
+            mycontact: mes contacts
+            form: formulaire de contact
+            btn: envoyer le message
+            placeholder:
+                name: nom
+                email: e-mail:
+                message: laissez moi un message...
+
+

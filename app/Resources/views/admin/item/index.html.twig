@@ -5,9 +5,78 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">{{ 'admin.page.title.items.items' | trans | capitalize }}</h1>
+                <h1 class="page-header">{{ 'admin.page.title.items.item' | trans | capitalize }}</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                {% include 'inc/flash.message.html.twig' %}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="panel-body">
+                    <a href="{{ url('item.form') }}" class="btn btn-outline btn-default" style="background-color: #f5f5f5;">{{ 'admin.page.form.item.add' | trans | upper  }}</a>
+                    <br>
+                    <br>
+                    <br>
+                    <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                        <tr>
+                            <th>{{ 'admin.page.form.item.table.id' | trans | capitalize }}</th>
+                            <th>{{ 'admin.page.form.item.table.name' | trans | capitalize }}</th>
+                            <th>{{ 'admin.page.form.item.table.image' | trans | capitalize }}</th>
+                            <th>{{ 'admin.page.form.item.table.modified' | trans | capitalize }}</th>
+                            <th>{{ 'admin.page.form.item.table.description' | trans | capitalize }}</th>
+                            <th>{{ 'admin.page.form.item.table.category' | trans | capitalize }}</th>
+                            <th>{{ 'admin.page.form.item.table.skill_id' | trans | capitalize }}</th>
+                            <th>{{ 'admin.page.form.item.table.action' | trans | capitalize }}</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        {% for item in items %}
+                            <tr>
+                                <th scope="row">{{ item.id }}</th>
+                                <td>{{ item.translations[app.request.locale].name | capitalize}}</td>
+                                <td><img src="{{ asset("img/item/"~item.image) }}" alt="{{ item.translations[app.request.locale].name}}" style="width: 30px; height: 30px"/>{{ item.image}}</td>
+                                <td>{{ item.modified}}</td>
+                                <td>{{ item.translations[app.request.locale].description | capitalize}}</td>
+                                <td>{{ item.category.translations[app.request.locale].name | capitalize}}</td>
+
+                                <td>
+                                    <ul class="list-group">
+                                        {% for skill in item.skills %}
+                                            <li class="list-group-item">{{ skill.id}}</li>
+                                        {% endfor %}
+
+                                    </ul>
+                                </td>
+                                <th>
+                                    <a href="{{ url('item.update', { 'id' : item.id }) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    <a href="{{ url('item.delete', { 'id' : item.id }) }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                </th>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
     </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
 {% endblock %}

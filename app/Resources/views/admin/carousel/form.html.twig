@@ -1,0 +1,35 @@
+{% extends 'admin/base.admin.html.twig' %}
+
+{% block body %}
+    <div id="page-wrapper" style="min-height: 602px;">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">{{ 'admin.page.title.items.carousel' | trans | capitalize }}</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel-body">
+                    {{ form_start(form, {'attr': { 'novalidate': 'novalidate' } } ) }}
+
+                    <p>
+                        {{ form_label(form.image, 'admin.page.form.carousel.new_carousel.image' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.image) }}
+                        {{ form_errors(form.image) }}
+                    </p>
+
+                    <p>
+                        <input type="submit" name="submit" value="ADD" class="btn btn-info">
+                    </p>
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+

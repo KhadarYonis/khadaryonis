@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- About Me Subpage -->
+    <section class="pt-page-2" style="padding: 50px 70px 50px; background-color: #fff;">
+        <div class="section-title-block">
+            <h2 class="section-title">{{ 'public.page.aboutme.aboutme' | trans | capitalize }}</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8 col-md-8 subpage-block">
+                <div class="general-info">
+                    <h3>{{ 'public.page.aboutme.title' | trans | capitalize }}</h3>
+                    {% for contact in contacts %}
+                        <p>{{ contact.translations[app.request.locale].descriptionLong | capitalize | raw }}</p>
+                    {% endfor %}
+              </div>
+            </div>
+        </div>
+
+        <!-- Services block -->
+        <div class="block-title">
+            <h3>{{ 'public.page.aboutme.title_one' | trans | capitalize }}</h3>
+        </div>
+
+        <div class="row">
+            {% for service in services %}
+                <div class="col-sm-6 col-md-4 subpage-block">
+                    <div class="service-block">
+                        <div class="service-info">
+                            <img src="{{ asset("img/service/"~service.image) }}" alt="{{ service.translations[app.request.locale].name | capitalize }}" />
+                            <h4>{{ service.translations[app.request.locale].name | capitalize }}</h4>
+                            <p>{{ service.translations[app.request.locale].description | capitalize | raw }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <!-- End of Services block -->
+
+        <!-- Clients block -->
+        <div class="block-title">
+            <h3>{{ 'public.page.aboutme.title_two' | trans | capitalize }}</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 col-md-2 subpage-block">
+                <div class="client_block">
+                    <a href="http://www.univ.edu.dj/" target="_blank" title="Université de Djibouti"><img src="{{ asset('asset/images/clients/client_1.png') }}" alt="Université de Djibouti"></a>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-md-2 subpage-block">
+                <div class="client_block">
+                    <a href="https://www.univ-lehavre.fr/" target="_blank" title="Université du Havre"><img src="{{ asset('asset/images/clients/client_2.png') }}" alt="Université du Havre"></a>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-md-2 subpage-block">
+                <div class="client_block">
+                    <a href="https://www.lajavaness.com" target="_blank" title="La Javaness"><img src="{{ asset('asset/images/clients/client_3.png') }}" alt="La javaness"></a>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-md-2 subpage-block">
+                <div class="client_block">
+                    <a href="https://3wa.fr/" target="_blank" title="3 w academy"><img src="{{ asset('asset/images/clients/client_4.png') }}" alt="3 W academy"></a>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-md-2 subpage-block">
+                <div class="client_block">
+                    <a href="#" target="_blank" title="Pourquoi pas votre logo un jour ?"><img src="{{ asset('asset/images/clients/your_logo.png') }}" alt="your logo"></a>
+                </div>
+            </div>
+
+        </div>
+        <!-- End of Clients block -->
+
+        <!-- Fun facts block -->
+        <div class="block-title">
+            <h3>{{ 'public.page.aboutme.title_three' | trans | capitalize }}</h3>
+        </div>
+
+        <div class="row">
+            {% for day in daily %}
+                <div class="col-sm-6 col-md-3 subpage-block">
+                    <div class="fun-fact-block gray-bg">
+                        <img src="{{ asset("img/daily/"~day.image) }}" alt="{{ day.translations[app.request.locale].name}}" style="width: 56px; height: 56px"/>
+                        <h4>{{ day.translations[app.request.locale].name | capitalize }}</h4>
+                        <span class="fun-value">24h/24</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <!-- End of Fun fucts block -->
+    </section>
+    <!-- End of About Me Subpage -->
+
+
+{% endblock %}

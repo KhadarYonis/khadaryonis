@@ -1,0 +1,175 @@
+{% extends 'admin/base.admin.html.twig' %}
+
+{% block body %}
+    <div id="page-wrapper" style="min-height: 602px;">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 class="page-header">{{ 'admin.page.title.contact' | trans | capitalize }}</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel-body">
+                    {{ form_start(form, {'attr': { 'novalidate': 'novalidate' } } ) }}
+
+                    <p>
+                        {{ form_label(form.firstName, 'admin.page.form.contact.new_contact.first_name' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.firstName, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.first_name' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.firstName) }}
+                    </p>
+
+                    <p>
+                        {{ form_label(form.lastName, 'admin.page.form.contact.new_contact.last_name' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.lastName, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.last_name' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.lastName) }}
+                    </p>
+
+
+                    <p>
+                        {{ form_label(form.age, 'admin.page.form.contact.new_contact.age' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.age, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.age' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.age) }}
+                    </p>
+
+                    <p>
+                        {{ form_label(form.email, 'admin.page.form.contact.new_contact.email' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.email, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.email' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.email) }}
+                    </p>
+
+                    <p>
+                        {{ form_label(form.phone, 'admin.page.form.contact.new_contact.phone' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.phone, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.phone' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.phone) }}
+                    </p>
+
+                    <p>
+                        {{ form_label(form.city, 'admin.page.form.contact.new_contact.city' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.city, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.city' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.city) }}
+                    </p>
+
+                    <p>
+                        {{ form_label(form.cp, 'admin.page.form.contact.new_contact.cp' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.cp, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.cp' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.cp) }}
+                    </p>
+
+                    <p>
+                        {{ form_label(form.region, 'admin.page.form.contact.new_contact.region' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.region, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.region' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.region) }}
+                    </p>
+
+                    <p>
+                        {{ form_label(form.country, 'admin.page.form.contact.new_contact.country' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.country, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.country' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.country) }}
+                    </p>
+
+
+                    <p>
+                        {{ form_label(form.job_fr, 'admin.page.form.contact.new_contact.job_fr' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.job_fr, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.job_fr' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.job_fr) }}
+                    </p>
+
+                    <p>
+                        {{ form_label(form.job_en, 'admin.page.form.contact.new_contact.job_en' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.job_en, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.job_en' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.job_en) }}
+                    </p>
+
+
+
+
+                    <p>
+                        {{ form_label(form.description_small_fr, 'admin.page.form.contact.new_contact.description_small_fr' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.description_small_fr, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.description_small_fr' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.description_small_fr) }}
+                    </p>
+
+                    <p>
+                        {{ form_label(form.description_small_en, 'admin.page.form.contact.new_contact.description_small_en' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.description_small_en, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.description_small_en' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.description_small_en) }}
+                    </p>
+
+
+
+                    <p>
+                        {{ form_label(form.description_long_fr, 'admin.page.form.contact.new_contact.description_long_fr' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.description_long_fr, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.description_long_fr' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.description_long_fr) }}
+                    </p>
+
+                    <p>
+                        {{ form_label(form.description_long_en, 'admin.page.form.contact.new_contact.description_long_en' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.description_long_en, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.description_long_en' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.description_long_en) }}
+                    </p>
+
+
+                    <p>
+                        {{ form_label(form.intro_description_fr, 'admin.page.form.contact.new_contact.intro_description_fr' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.intro_description_fr, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.intro_description_fr' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.intro_description_fr) }}
+                    </p>
+
+                    <p>
+                        {{ form_label(form.intro_description_en, 'admin.page.form.contact.new_contact.intro_description_en' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.intro_description_en, { 'attr' : {
+                            'placeholder' : 'admin.page.form.contact.new_contact.placeholder.intro_description_en' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.intro_description_en) }}
+                    </p>
+
+
+
+                    <p>
+                        <input type="submit" name="submit" value="ADD" class="btn btn-info">
+                    </p>
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+

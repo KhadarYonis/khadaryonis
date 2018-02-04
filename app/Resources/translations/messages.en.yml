@@ -1,17 +1,342 @@
 admin:
     page:
         title:
-            dashboard: dashborad
+            dashboard: dashboard
             items:
                 items: items
+                item: items
                 categories: categories
                 skills: skills
+                carousel: carousel items
             services: services
             daily: daily
             resume:
                 resume: resume
-                diplomas: diplomas et training
-                projects: projects et realization
+                diplomas: diplomas and training
+                projects: projects and realization
             contact: contact
             portfolio: portfolio
+        form:
+            daily:
+                add: add new daily
+                table:
+                    id: id
+                    name: name
+                    image: image
+                    action: action
+                new_daily:
+                    image: image
+                    name_fr: name in french
+                    name_en: name in english
+                    placeholder:
+                        name_fr: enter name in french
+                        name_en: enter name in english
+            carousel:
+                add: add new carousel
+                table:
+                    id: id
+                    image: image
+                    portfolioId: portfolio id
+                    action: action
+                new_carousel:
+                    image: image
+            service:
+                add: add new service
+                table:
+                    id: id
+                    name: name
+                    description: description
+                    image: image
+                    action: action
+                new_service:
+                    image: image
+                    name_fr: name in french
+                    name_en: name in english
+                    description_fr: description in french
+                    description_en: description in english
+                    placeholder:
+                        name_fr: enter your name in french
+                        name_en: enter your name in english
+                        description_fr: enter your description in french
+                        description_en: enter your descriptin in english
+            training:
+                add: add new training
+                table:
+                    id: id
+                    name: name
+                    academy: academy
+                    description: description
+                    date_begin: date begin
+                    date_end: date end
+                    action: action
+                new_training:
+                    date_begin: date begin
+                    date_end: date end
+                    name_fr: name in french
+                    name_en: name in english
+                    academy_fr: academy in french
+                    academy_en: academy in english
+                    description_fr: description in french
+                    description_en: description in english
+                    placeholder:
+                        name_fr: enter your name in french
+                        name_en: enter your name in english
+                        academy_fr: enter your  academy in french
+                        academy_en: enter your  academy in english
+                        description_fr: enter your description in french
+                        description_en: enter your descriptin in english
+            project:
+                add: add new project
+                table:
+                    id: id
+                    name: name
+                    academy: academy
+                    description: description
+                    date_begin: date begin
+                    date_end: date end
+                    action: action
+                new_project:
+                    date_begin: date begin
+                    date_end: date end
+                    name_fr: name in french
+                    name_en: name in english
+                    academy_fr: academy in french
+                    academy_en: academy in english
+                    description_fr: description in french
+                    description_en: description in english
+                    placeholder:
+                        name_fr: enter your name in french
+                        name_en: enter your name in english
+                        academy_fr: enter your  academy in french
+                        academy_en: enter your  academy in english
+                        description_fr: enter your description in french
+                        description_en: enter your descriptin in english
+            contact:
+                add: add new contact
+                table:
+                    id: id
+                    first_name: first name
+                    last_name: last name
+                    email: email
+                    phone: phone
+                    description_small: small description
+                    action: action
+                new_contact:
+                        first_name: first name
+                        last_name: last name
+                        age: age
+                        cp: cp
+                        city: city
+                        region: region
+                        country: country
+                        phone: phone
+                        email: email
+                        job_fr: job in french
+                        job_en: job in english
+                        description_small_fr: description small
+                        description_small_en: description small
+                        description_long_fr: description long
+                        description_long_en: description long
+                        intro_description_fr: intro description
+                        intro_description_en: intro description
+                        placeholder:
+                            first_name: enter first name
+                            last_name: enter last name
+                            age: enter age
+                            cp: enter cp
+                            city: enter city
+                            region: enter region
+                            country: enter country
+                            phone: enter phone
+                            email: enter email
+                            job_fr: enter job in french
+                            job_en: enter job in english
+                            description_small_fr: enter description small in french
+                            description_small_en: enter description small in english
+                            description_long_fr: enter description long in french
+                            description_long_en: enter description long in english
+                            intro_description_fr: enter intro description in french
+                            intro_description_en: enter intro description in english
+            category:
+                add: add new category
+                table:
+                    id: id
+                    name: name
+                    description: description
+                    portfolioId: portfolio id
+                    itemId: item id
+                    action: action
+                new_category:
+                    name_fr: name in french
+                    name_en: name in english
+                    description_fr: description in english
+                    description_en: description in english
+                    placeholder:
+                        name_fr: enter name in french
+                        name_en: enter name in english
+                        description_fr: enter description in english
+                        description_en: enter description in english
+            skill:
+                add: add new skill
+                table:
+                    id: id
+                    name: name
+                    description: description
+                    percentage: percentage
+                    action: action
+                new_skill:
+                    percentage: percentage
+                    name_fr: name in french
+                    name_en: name in english
+                    description_fr: description in english
+                    description_en: description in english
+                    placeholder:
+                        percentage: enter percentage
+                        name_fr: enter name in french
+                        name_en: enter name in english
+                        description_fr: enter description in english
+                        description_en: enter description in english
+            item:
+                add: add new item
+                table:
+                    id: id
+                    name: name
+                    image: image
+                    modified: modified
+                    description: description
+                    category: category
+                    skill_id: skill id
+                    action: action
+                new_item:
+                    name_fr: name in french
+                    name_en: name in english
+                    image: image
+                    modified: modified
+                    date_create: date create
+                    author: author
+                    skills: skills
+                    category: category
+                    description_fr: description in english
+                    description_en: description in english
+                    category: category
+                    placeholder:
+                        author: enter author
+                        name_fr: enter name in french
+                        name_en: enter name in english
+                        image: image
+                        modified: modified
+                        description_fr: enter description in english
+                        description_en: enter description in english
+            portfolio:
+                add: add new portfolio
+                table:
+                    id: id
+                    name: name
+                    customer: customer
+                    website: website
+                    date_begin: date begin
+                    date_end: date end
+                    description: description
+                    category_id: category id
+                    skill_id: skill id
+                    action: action
+                new_portfolio:
+                    name_fr: name in french
+                    name_en: name in english
+                    customer: customer
+                    website: website
+                    skills: skills
+                    category: category
+                    date_begin: date begin
+                    date_end: date end
+                    description_fr: description in english
+                    description_en: description in english
+                    placeholder:
+                        name_fr: enter name in french
+                        name_en: enter name in english
+                        customer: customer
+                        website: website
+                        description_fr: enter description in english
+                        description_en: enter description in english
 
+    flash_message:
+        daily:
+            new_daily: new daily added !
+            edit_daily: daily has been edited !
+            delete_daily: daily has been deleted !
+        service:
+            new_service: new service added !
+            edit_service: service has been edited !
+            delete_service: service has been deleted !
+        training:
+            new_training: new training added !
+            edit_training: training has been edited !
+            delete_training: training has been deleted !
+        project:
+            new_project: new project added !
+            edit_project: project has been edited !
+            delete_project: project has been deleted !
+        contact:
+            new_contact: new contact added !
+            edit_contact: contact has been edited !
+            delete_contact: contact has been deleted !
+        category:
+            new_category: new category added !
+            edit_category: category has been edited !
+            delete_category: category has been deleted !
+        carousel:
+            new_carousel: new carousel added !
+            edit_carousel: carousel has been edited !
+            delete_carousel: carousel has been deleted !
+        skill:
+            new_skill: new skill added !
+            edit_skill: skill has been edited !
+            delete_skill: skill has been deleted !
+        item:
+            new_item: new item added !
+            edit_item: item has been edited !
+            delete_item: item has been deleted !
+        portfolio:
+            new_portfolio: new portfolio added !
+            edit_portfolio: portfolio has been edited !
+            delete_portfolio: portfolio has been deleted !
+
+public:
+    page:
+        menu:
+            home: accueil
+            about_me: about me
+            resume: resume
+            portfolio: portfolio
+            blog: blog
+            contact: contact
+            job: Full Stack Developer specialized of the Symfony framework
+        homepage:
+            back-end: back-end developper
+            full-stack: full-stack developper
+            age: age
+            address: address
+            e-mail: e-mail
+            phone: phone
+            job: job
+            or: or
+        resume:
+            title: resume
+            resume: 5 years in the web (4.5 years of study and 6 months of professional experience)
+            title_one: diplomas and trainning
+            title_two: projects and realization
+            title_three: skills
+        aboutme:
+            aboutme: about me
+            title: i am a Full Stack developer specializing in the Symfony framework and especially an IT enthusiast.
+            title_one: my services
+            title_two: i was there one day
+            title_three: daily
+        contact:
+            mycontact: my contacts
+            form: contact form
+            btn: send the message
+            placeholder:
+                name: name
+                email: email
+                message: leave me a message...

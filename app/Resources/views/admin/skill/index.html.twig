@@ -9,5 +9,63 @@
             </div>
             <!-- /.col-lg-12 -->
         </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                {% include 'inc/flash.message.html.twig' %}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="panel-body">
+                    <a href="{{ url('skill.form') }}" class="btn btn-outline btn-default" style="background-color: #f5f5f5;">{{ 'admin.page.form.skill.add' | trans | upper  }}</a>
+                    <br>
+                    <br>
+                    <br>
+                    <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example"">
+                    <thead>
+                    <tr>
+                        <th>{{ 'admin.page.form.skill.table.id' | trans | capitalize }}</th>
+                        <th>{{ 'admin.page.form.skill.table.name' | trans | capitalize }}</th>
+                        <th>{{ 'admin.page.form.skill.table.description' | trans | capitalize }}</th>
+                        <th>{{ 'admin.page.form.skill.table.percentage' | trans | capitalize }}</th>
+                        <th>{{ 'admin.page.form.skill.table.action' | trans | capitalize }}</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {% for skill in skills %}
+                        <tr>
+                            <th scope="row">{{ skill.id }}</th>
+                            <td>{{ skill.translations[app.request.locale].name | capitalize}}</td>
+                            <td>{{ skill.translations[app.request.locale].description | capitalize}}</td>
+                            <td>{{ skill.percentage | capitalize}}</td>
+                            <th>
+                                <a href="{{ url('skill.update', { 'id' : skill.id }) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="{{ url('skill.delete', { 'id' : skill.id }) }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                            </th>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
+
+
+
+{% block javascripts %}
+    <script>
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
+{% endblock %}
+
+

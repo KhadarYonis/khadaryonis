@@ -7,6 +7,16 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
+        <!-- Custom CSS -->
+        <link href="{{ asset('../css/admin/sb-admin-2.min.css') }}" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+        <!-- Froala CSS -->
+        <link rel="stylesheet" href="{{ asset('ckeditor/contents.css') }}">
+
+
         <!-- MetisMenu CSS -->
         <link href="{{ asset('../js/admin/vendor/metisMenu/metisMenu.min.css') }}" rel="stylesheet">
 
@@ -16,8 +26,6 @@
         <!-- DataTables Responsive CSS -->
         <link href="{{ asset('../js/admin/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet') }}">
 
-        <!-- Custom CSS -->
-        <link href="{{ asset('../css/admin/sb-admin-2.min.css') }}" rel="stylesheet">
 
         <!-- Morris Charts CSS -->
         <link href="{{ asset('../js/admin/vendor/morrisjs/morris.css') }}" rel="stylesheet">
@@ -42,6 +50,7 @@
         <!-- jQuery
             <script src="{{ asset('../vendor/jquery/jquery.min.js') }}"></script> -->
         <script src="{{ asset('js/jquery-3.2.1.slim.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('ckeditor/ckeditor.js') }}" charset="utf-8"></script>
         <script src="{{ asset('js/popper.min.js') }}"></script>
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
@@ -61,6 +70,7 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="{{ asset('../js/admin/sb-admin-2.min.js') }}"></script>
+        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

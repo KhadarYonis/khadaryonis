@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 class HomepageController extends Controller
 {
     /**
-     * @Route("/", name="homepage.index")
+     * @Route("/", name="admin.homepage.index")
      */
     public function indexAction():Response
     {

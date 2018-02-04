@@ -1,0 +1,70 @@
+<!-- Header -->
+<header id="site_header" class="header mobile-menu-hide">
+    <div class="my-photo">
+        <a href="{{ asset('asset/images/monphoto2.jpg') }}" class="lightbox" title="Khadar Yonis Sougal">
+            <img src="{{ asset('asset/images/monphoto.jpg') }}" alt="image">
+        </a>
+        <div class="mask"></div>
+    </div>
+
+    <div class="site-title-block">
+            <h1 class="site-title">Khadar YONIS </h1>
+            <p class="site-description">{{ 'public.page.menu.job' | trans}}</p>
+    </div>
+
+    <!-- Navigation & Social buttons -->
+    <div class="site-nav">
+        <!-- Main menu -->
+        <ul id="nav" class="site-main-menu">
+            <!-- About Me Subpage link -->
+            <li>
+                <a class="pt-trigger" href="{{ url('homepage.public.index') }}" data-animation="58" data-goto="1">{{ 'public.page.menu.home' | trans | capitalize }}</a><!-- href value = data-id without # of .pt-page. Data-goto is the number of section -->
+            </li>
+            <!-- /About Me Subpage link -->
+            <!-- About Me Subpage link -->
+            <li>
+                <a class="pt-trigger" href="{{ url('aboutme.public.index') }}" data-animation="59" data-goto="2">{{ 'public.page.menu.about_me' | trans | capitalize }}</a>
+            </li>
+            <!-- /About Me Subpage link -->
+            <li>
+                <a class="pt-trigger" href="{{ url('resume.public.index') }}" data-animation="60" data-goto="3">{{ 'public.page.menu.resume' | trans | capitalize }}</a>
+            </li>
+            <li>
+                <a class="pt-trigger" href="{{ url('portfolio.public.index') }}" data-animation="61" data-goto="4">{{ 'public.page.menu.portfolio' | trans | capitalize }}</a>
+            </li>
+            <li>
+                <a class="pt-trigger" href="#blog" data-animation="58" data-goto="5">{{ 'public.page.menu.blog' | trans | capitalize }}</a>
+            </li>
+            <li>
+                <a class="pt-trigger" href="{{ url('contact.public.index') }}" data-animation="59" data-goto="6">{{ 'public.page.menu.contact' | trans | capitalize }}</a>
+            </li>
+        </ul>
+        <!-- /Main menu -->
+
+        <!-- Social buttons -->
+        <ul class="social-links">
+            <li><a class="tip social-button" href="https://www.linkedin.com/in/khadar-yonis-97549513a/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            <li><a class="tip social-button" href="https://www.facebook.com/Khadar.Yonis.Sougal" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="tip social-button" href="https://twitter.com/KhadarYonis" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li> <!-- Full list of social icons: http://fontawesome.io/icons/#brand -->
+            <li><a class="tip social-button" href="https://plus.google.com/110472348261497879493" target="_blank" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+            <!--<li><a class="tip social-button" href="#" title="Youtube"><i class="fa fa-youtube"></i></a></li>-->
+            <!--<li><a class="tip social-button" href="#" title="last.fm"><i class="fa fa-lastfm"></i></a></li>-->
+            <!--<li><a class="tip social-button" href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>-->
+        </ul>
+        <!-- /Social buttons -->
+    </div>
+    <!-- Navigation & Social buttons -->
+</header>
+<!-- /Header -->
+
+<!-- Mobile Header -->
+<div class="mobile-header mobile-visible">
+    <div class="mobile-logo-container">
+        <div class="mobile-site-title">Khadar Yonis</div>
+    </div>
+
+    <a class="menu-toggle mobile-visible">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+<!-- /Mobile Header -->

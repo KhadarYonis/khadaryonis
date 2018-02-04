@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <!-- Portfolio Subpage -->
+    <section class="pt-page-4" style="padding: 50px 70px 50px; background-color: #fff; height: 100%;">
+        <div class="section-title-block">
+            <h2 class="section-title">Portfolio</h2>
+            <h5 class="section-description">Mes meilleurs travaux</h5>
+        </div>
+
+        <!-- Portfolio Content -->
+        <div class="portfolio-content">
+
+            <!-- Portfolio filter -->
+            <ul id="portfolio_filters" class="portfolio-filters">
+                {% for category in categories %}
+                    <li class="active">
+                        <a class="filter btn btn-sm btn-link" data-group="{{ category.translations[app.request.locale].name }}">{{ category.translations[app.request.locale].name | capitalize}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <!-- End of Portfolio filter -->
+
+            <!-- Portfolio Grid -->
+
+                <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3" style="margin-bottom: 10px;">
+                {% for portfolio in portfolios %}
+
+                        <!-- Portfolio Item 1 -->
+
+                        <figure class="item" data-groups='["{{ portfolio.category.translations[app.request.locale].name }}"]' style="height: 211.36px">
+                            {% for carousel in carousels %}
+                            <a class="ajax-page-load" href="{{ url('homepage.public.index') }}" title="{{ portfolio.customer }}" style="height: 211.36px">
+
+
+
+                                    {#<h2>{{ portfolio.id}}</h2>#}
+                                    <img src="{{ asset("img/carousel/"~carousel.image) }}" alt="" style="height: 211.36px">
+
+
+                                <div>
+                                    <h5 class="name">{{ portfolio.customer }}</h5>
+                                    <small>{{ portfolio.category.translations[app.request.locale].name }}</small>
+                                    <i class="fa fa-file-text-o"></i>
+                                </div>
+                            </a>
+
+                            {% endfor %}
+                        </figure>
+                    <!-- /Portfolio Item 1 -->
+                    {% endfor %}
+                </div>
+            <!-- /Portfolio Grid -->
+
+        </div>
+    </section>
+    <!-- /Portfolio Subpage -->
+{% endblock %}

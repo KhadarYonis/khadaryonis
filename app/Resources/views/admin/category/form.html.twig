@@ -1,0 +1,63 @@
+{% extends 'admin/base.admin.html.twig' %}
+
+{% block body %}
+    <div id="page-wrapper" style="min-height: 602px;">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 class="page-header">{{ 'admin.page.title.items.categories' | trans | capitalize }}</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel-body">
+                    {{ form_start(form, {'attr': { 'novalidate': 'novalidate' } } ) }}
+
+                    <p>
+                        {{ form_label(form.name_fr, 'admin.page.form.category.new_category.name_fr' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.name_fr, { 'attr' : {
+                            'placeholder' : 'admin.page.form.category.new_category.placeholder.name_fr' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.name_fr) }}
+                    </p>
+
+                    <p>
+                        {{ form_label(form.description_fr, 'admin.page.form.category.new_category.description_fr' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.description_fr, { 'attr' : {
+                            'placeholder' : 'admin.page.form.category.new_category.placeholder.description_fr' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.description_fr) }}
+                    </p>
+
+
+                    <p>
+                        {{ form_label(form.name_en, 'admin.page.form.category.new_category.name_en' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.name_en, { 'attr' : {
+                            'placeholder' : 'admin.page.form.category.new_category.placeholder.name_en' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.name_en) }}
+                    </p>
+
+                    <p>
+                        {{ form_label(form.description_en, 'admin.page.form.category.new_category.description_en' | trans | capitalize ~ ' :') }}
+                        {{ form_widget(form.description_en, { 'attr' : {
+                            'placeholder' : 'admin.page.form.category.new_category.placeholder.description_en' | trans | capitalize
+                        }}) }}
+                        {{ form_errors(form.description_en) }}
+                    </p>
+
+
+                    <p>
+                        <input type="submit" name="submit" value="ADD" class="btn btn-info">
+                    </p>
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
